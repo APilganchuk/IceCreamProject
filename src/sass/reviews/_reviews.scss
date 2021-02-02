@@ -91,6 +91,10 @@
     line-height: 1.87;
     
     letter-spacing: 0.04em;
+    @media screen and (max-width: $to-tablet) {
+    background-image: repeating-linear-gradient(to bottom, #fff2 0px, #fff2 26px, #E1E1E1 28px, #E1E1E1 29px);
+    
+  }
     
   
   @media screen and(min-width: $tablet) {
@@ -178,7 +182,7 @@
     height: 40px;
     background-image: url("../images/reviews/quote.png");
     @media screen and (max-width: 767px) {
-    left: 70px;
+    left: 35px;
     
   }
   @media screen and (min-width: $tablet) and (max-width: $to-desctop) {
