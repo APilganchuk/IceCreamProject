@@ -162,11 +162,27 @@ p {
   font-size: 12px;
   line-height: 1.86;
   margin-bottom: 10px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: $desctop) {
+    font-size: 16px;
+  }
 }
 
 .item-title {
   color: black;
   line-height: 1.86;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: $desctop) {
+    font-size: 16px;
+  }
 }
 
 .paragraph-time {
