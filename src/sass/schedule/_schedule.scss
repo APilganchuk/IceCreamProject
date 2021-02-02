@@ -25,23 +25,19 @@
   z-index: 2;
   @media screen and(max-width: $to-mobile) {
     max-width: $mobile;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0 50px;
   }
   @media screen and(min-width: $mobile) {
     width: $mobile;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0 50px;
   }
   @media screen and(min-width: $tablet) {
     width: $tablet;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding: 0 36px;
   }
   @media screen and(min-width: $desctop) {
     width: $desctop;
-    padding-left: 115px;
-    padding-right: 115px;
+    padding: 0 115px;
   }
 }
 
@@ -62,6 +58,10 @@
 
   @media screen and (min-width: $desctop) {
     height: 650px;
+    background-image: url(../images/schedule-img/sectionbg-schedule@2x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
   }
 }
 
@@ -159,6 +159,7 @@ p {
 .item-city {
   display: block;
   color: black;
+  font-size: 12px;
   line-height: 1.86;
   margin-bottom: 10px;
 }
@@ -170,13 +171,32 @@ p {
 
 .paragraph-time {
   color: $dark-pink;
+  line-height: 1.83;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+
+  @media screen and (min-width: $desctop) {
+    font-size: 16px;
+    line-height: 1.87;
+  }
 }
 
 .paragraph-address {
   color: $description-text;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 1.5;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+
+  @media screen and (min-width: $desctop) {
+    font-size: 16px;
+    line-height: 1.81;
+  }
 }
 
 .schedule-buttons {
@@ -229,6 +249,11 @@ p {
   :focus {
     color: white;
     background-color: $home-icon;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 1.31;
   }
 }
 
