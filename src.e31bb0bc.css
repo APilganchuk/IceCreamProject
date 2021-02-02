@@ -270,9 +270,7 @@ img {
 }
 
 .menu-box {
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (max-width: 767px) {
   .menu-box {
@@ -1567,19 +1565,30 @@ img {
 .text-slider1, .text-slider2, .text-slider3 {
   display: none;
   min-height: 80px;
-  padding-left: 10px;
   margin: 0;
   background-image: repeating-linear-gradient(to bottom, #fff2 0px, #fff2 26px, #E1E1E1 26px, #E1E1E1 28px);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.87;
   letter-spacing: 0.04em;
+}
+@media screen and (max-width: 767px) {
+  .text-slider1, .text-slider2, .text-slider3 {
+    background-image: repeating-linear-gradient(to bottom, #fff2 0px, #fff2 26px, #E1E1E1 28px, #E1E1E1 29px);
+  }
 }
 @media screen and (min-width: 768px) {
   .text-slider1, .text-slider2, .text-slider3 {
     padding-left: 54px;
+    font-size: 16px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .text-slider1, .text-slider2, .text-slider3 {
+    font-size: 16px;
+  }
+}
+
 #r1:checked ~ .text-container .text-slider1 {
   display: block;
 }
@@ -1659,7 +1668,7 @@ img {
 @media screen and (max-width: 767px) {
   .text-slider1::before, .text-slider2::before,
 .text-slider3::before {
-    left: 70px;
+    left: 35px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -1672,18 +1681,27 @@ img {
 .text-container {
   position: relative;
   max-width: 928px;
-  min-width: 320px;
   padding: 32px 50px;
   margin-bottom: 15px;
   text-align: center;
   background-color: #FAFAFA;
   z-index: -2;
 }
+@media screen and (max-width: 767px) {
+  .text-container {
+    margin: 0 20px;
+  }
+}
 
 .point-container {
   display: flex;
   justify-content: center;
   margin-bottom: 90px;
+}
+@media screen and (max-width: 767px) {
+  .point-container {
+    margin-top: 30px;
+  }
 }
 
 .point-container .point {
@@ -1725,29 +1743,25 @@ img {
 @media screen and (max-width: 319px) {
   .container-schedule {
     max-width: 320px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0 50px;
   }
 }
 @media screen and (min-width: 320px) {
   .container-schedule {
     width: 320px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding: 0 50px;
   }
 }
 @media screen and (min-width: 768px) {
   .container-schedule {
     width: 768px;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding: 0 36px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container-schedule {
     width: 1200px;
-    padding-left: 115px;
-    padding-right: 115px;
+    padding: 0 115px;
   }
 }
 
@@ -1770,6 +1784,10 @@ img {
 @media screen and (min-width: 1200px) {
   .schedule::before {
     height: 650px;
+    background-image: url(/sectionbg-schedule@2x.e1a6209a.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
   }
 }
 
@@ -1869,24 +1887,72 @@ p {
     transform: scale(1.07);
   }
 }
-.schedule-card .item-city {
+
+.item-city {
   display: block;
   color: black;
+  font-size: 12px;
   line-height: 1.86;
   margin-bottom: 10px;
 }
-.schedule-card .item-title {
+@media screen and (min-width: 768px) {
+  .item-city {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .item-city {
+    font-size: 16px;
+  }
+}
+
+.item-title {
   color: black;
   line-height: 1.86;
 }
-.schedule-card .paragraph-time {
-  color: #ffa5ba;
+@media screen and (min-width: 768px) {
+  .item-title {
+    font-size: 14px;
+  }
 }
-.schedule-card .paragraph-address {
+@media screen and (min-width: 1200px) {
+  .item-title {
+    font-size: 16px;
+  }
+}
+
+.paragraph-time {
+  color: #ffa5ba;
+  line-height: 1.83;
+}
+@media screen and (min-width: 768px) {
+  .paragraph-time {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .paragraph-time {
+    font-size: 16px;
+    line-height: 1.87;
+  }
+}
+
+.paragraph-address {
   color: #907e82;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 1.5;
+}
+@media screen and (min-width: 768px) {
+  .paragraph-address {
+    font-size: 14px;
+    line-height: 1.86;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .paragraph-address {
+    font-size: 16px;
+    line-height: 1.81;
+  }
 }
 
 .schedule-buttons {
@@ -1949,6 +2015,12 @@ p {
 }
 .button-schedule__white:hover, .button-schedule__white:focus {
   background-color: #ecebeb;
+}
+@media screen and (min-width: 768px) {
+  .button-schedule {
+    font-size: 16px;
+    line-height: 1.31;
+  }
 }
 
 .schedule-arrow {
