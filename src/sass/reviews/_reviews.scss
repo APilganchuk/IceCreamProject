@@ -1,3 +1,16 @@
+.reviews-gallery {
+  margin-top: -43px;
+  
+    @media screen and(min-width: $tablet) {
+      margin-top: -96px;
+    }
+    
+    @media screen and (min-width: $desctop) {
+    margin-top: -145px;
+   
+   }
+ }
+
 .slider-container {
     position: relative;
     display: flex;
