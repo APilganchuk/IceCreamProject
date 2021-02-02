@@ -83,7 +83,7 @@
     
     margin: 0;
     
-    background-image:  repeating-linear-gradient(to bottom, #fff2 0px, #fff2 26px, #E1E1E1 26px, #E1E1E1 28px);
+    background-image:  repeating-linear-gradient(to bottom, #fff2 0px, #fff2 26px, #E1E1E1 26px, #E1E1E1 29px);
     
         
     font-weight: 500;
@@ -182,7 +182,7 @@
     height: 40px;
     background-image: url("../images/reviews/quote.png");
     @media screen and (max-width: 767px) {
-    left: 35px;
+    left: 30px;
     
   }
   @media screen and (min-width: $tablet) and (max-width: $to-desctop) {
