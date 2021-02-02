@@ -16,6 +16,7 @@
 
   @media screen and(min-width: $desctop) {
     position: absolute;
+    left: 870px;
     width: 159px;
     height: 44px;
     // left: 956px;
@@ -50,38 +51,44 @@
     background-color: $light-btn-hover-bgc;
   }
 }
-.buynow-btn-tablet {
+.buynow-btn__tablet {
   display: none;
-  @media screen and(min-width: $tablet) {
+
+  // display: none;
+  // @media screen and(min-width: $tablet) {
+  //   display: block;
+  //   position: absolute;
+  //   z-index: 15;
+  //   font-style: normal;
+  //   font-weight: bold;
+  //   font-size: 16px;
+  //   line-height: 21px;
+  //   padding-left: 14px;
+  //   align-items: center;
+  //   text-align: center;
+  //   background-color: #fff;
+  //   color: $accented-text;
+  //   border-radius: 22px;
+  //   border: none;
+  //   background-color: #fff;
+  //   position: absolute;
+  //   width: 160px;
+  //   height: 44px;
+  //   left: 574px;
+  //   top: 38px;
+  &:hover,
+  &:focus {
+    background-color: $light-btn-hover-bgc;
+  }
+  @media screen and(min-width: $tablet) and(max-width: $to-desctop) {
     display: block;
-    position: absolute;
-    z-index: 15;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 21px;
-    padding-left: 14px;
-    align-items: center;
-    text-align: center;
-    background-color: #fff;
-    color: $accented-text;
-    border-radius: 22px;
-    border: none;
-    background-color: #fff;
-    position: absolute;
-    width: 160px;
-    height: 44px;
-    left: 574px;
-    top: 38px;
-    &:hover,
-    &:focus {
-      background-color: $light-btn-hover-bgc;
-    }
-    @media screen and(min-width: $desctop) {
-      display: none;
-    }
+    top: 8px;
+    left: 483px;
+    z-index: 10;
+    z-index: 100;
   }
 }
+
 .menu-close__icon-arrow-tablet {
   stroke: $accented-text;
   font-weight: 700;
