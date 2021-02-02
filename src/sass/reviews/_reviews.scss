@@ -1,3 +1,16 @@
+.reviews-gallery {
+  margin-top: -43px;
+  
+    @media screen and(min-width: $tablet) {
+      margin-top: -96px;
+    }
+    
+    @media screen and (min-width: $desctop) {
+    margin-top: -145px;
+   
+   }
+ }
+
 .slider-container {
     position: relative;
     display: flex;
@@ -158,28 +171,35 @@
     position: absolute;
     left: 0;
     top: 15px;
-    left: 55px;
+    left: 58px;
     content: "";
     display: block;
     width: 54px;
     height: 40px;
     background-image: url("../images/reviews/quote.png");
     @media screen and (max-width: 767px) {
-    left: 10px;
+    left: 70px;
     
   }
+  @media screen and (min-width: $tablet) and (max-width: $to-desctop) {
+    left: 70px;
+    
+  }
+  z-index: -1;
 }
 .text-container {
     position: relative;
     
     max-width: 928px;
     min-width: 320px;
-    
-        
+            
     padding: 32px 50px;
     margin-bottom: 15px;
 
+    text-align: center;
+
     background-color: #FAFAFA;
+    z-index: -2;
 }
 
 .point-container {
