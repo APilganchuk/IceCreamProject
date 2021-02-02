@@ -1,0 +1,39 @@
+.menuopen-btn {
+  z-index: 1000;
+  display: inline-flex;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  // @media screen and(min-width: $tablet) {
+  //   z-index: 15;
+  //   width: 20px;
+  //   height: 0px;
+  //   left: 524px;
+  //   top: 52px;
+  // }
+}
+.menu-close__icon {
+  stroke: #fff;
+  display: none;
+}
+.menu-burger__icon {
+  display: block;
+}
+
+.menuopen-btn.is-opened {
+  .menu-burger__icon {
+    display: none;
+  }
+  .menu-close__icon {
+    display: block;
+  }
+}
+
+.menu-button {
+  @media screen and(min-width: $desctop) {
+    display: none;
+  }
+}
