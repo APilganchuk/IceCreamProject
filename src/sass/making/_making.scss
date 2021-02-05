@@ -175,15 +175,18 @@
   }
 }
 
-.making-button::after {
-  content: '';
-  width: 7px;
-  height: 11px;
-  display: inline-block;
-  background-image: url(/images/making-buttton-arrow.svg);
-  background-repeat: no-repeat;
-  background-size: 7px 11px;
-  background-position: 50% 50%;
+// .making-button::after {
+//   content: '';
+//   width: 7px;
+//   height: 11px;
+//   display: inline-block;
+//   background-image: url(/images/making-buttton-arrow.svg);
+//   background-repeat: no-repeat;
+//   background-size: 7px 11px;
+//   background-position: 50% 50%;
+// }
+.making-arrow {
+  stroke: $accented-text;
 }
 .making-statistical {
   @media screen and (max-width: $to-tablet) {
