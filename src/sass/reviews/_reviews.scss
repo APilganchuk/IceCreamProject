@@ -1,229 +1,234 @@
 .reviews-gallery {
   margin-top: -43px;
-  
-    @media screen and(min-width: $tablet) {
-      margin-top: -96px;
-    }
-    
-    @media screen and (min-width: $desctop) {
+
+  @media screen and (min-width: $tablet) {
+    margin-top: -96px;
+  }
+
+  @media screen and (min-width: $desctop) {
     margin-top: -145px;
-   
-   }
- }
+  }
+}
+// /* Слайдер */
+// .slick-slider {
+// }
+// /* Слайдер запущен */
+// .slick-slider.slick-initialized {
+// }
+// /* Слайдер с точками */
+// .slick-slider.slick-dotted {
 
-.slider-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+// }
+// /* Ограничивающая оболочка */
+// .slick-list {
+// }
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  justify-content: center;
+}
+// /* Слайд */
+// .slick-slide {
+// }
+// /* Слайд активный (показывается) */
+// .slick-slide.slick-active {
+// }
+// /* Слайд основной */
+// .slick-slide.slick-current {
+// }
+// /* Слайд по центру */
+// .slick-slide.slick-center {
+// }
+// /* Клонированный слайд */
+// .slick-slide.slick-cloned {
+// }
+// /* Стрелка */
+// .slick-arrow {
+// }
+// /* Стрелка влево */
+// .slick-arrow.slick-prev {
+// }
+// /* Стрелка вправо */
+// .slick-arrow.slick-next {
+// }
+// /* Стрелка не активная */
+// .slick-arrow.slick-disabled {
+// }
+// /* Точки (булиты) */
+// .slick-dots {
+// }
+// .slick-dots li {
+// }
+// /* Активная точка */
+// .slick-dots li.slick-active {
+// }
+// /* Элемент точки */
+// .slick-dots li button {
+// }
 
-    
-    
-    align-items: center;
-
+// мой слайдер
+.slider {
+  position: relative;
+  overflow: hidden;
+  margin-top: 80px;
+  @media screen and (min-width: $tablet) {
     margin-top: 120px;
-    @media screen and (max-width: 767px) {
-    margin-top: 80px;
-    
   }
-       
-    
-    
+  @media screen and (min-width: $desctop) {
+    margin-top: 125px;
+  }
 }
+.slider .slick-arrow {
+  position: absolute;
+  bottom: 50%;
+  padding: 0;
+  margin: 0;
 
-.slide {
-    display: flex;
-    transition: transform 400ms ease;
+  font-size: 0;
+  z-index: 10;
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  border: 1px solid #fff5f6;
+  outline: none;
+  cursor: pointer;
 }
+.slider .slick-arrow.slick-prev {
+  left: 0;
+  background-image: url('../images/reviews/left-arrow.svg');
+  background-color: transparent;
+  transform: scale(1);
+  transition: transform 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
-.slider-box {
-    width: 85px;
-    height: 85px;
+  &:hover {
+    transform: scale(1.3);
+  }
+  &:focus {
+    transform: scale(1.3);
+  }
+}
+.slider .slick-arrow.slick-next {
+  right: 0;
+
+  background-image: url('../images/reviews/right-arrow.svg');
+  background-color: transparent;
+  transform: scale(1);
+  transition: transform 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+    transform: scale(1.3);
+  }
+  &:focus {
+    transform: scale(1.3);
+  }
+}
+.slider .slick-dots {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  & li:not(:last-child) {
+    margin-right: 18px;
+  }
+  & li {
+    width: 12px;
+    height: 12px;
     display: inline-flex;
-    overflow: hidden;
-    
-
-    margin-bottom: 15px;
-}
-
-.slider-navigation {
-    position: absolute;
-    bottom: 0;
-    display: block;
-
-}
-// Зависимость для смены картинок
-#r1:checked ~ .slider-box .slide {
-    transform: translateX(0);
-}
-#r2:checked ~ .slider-box .slide {
-    transform: translateX(-100%);
-}
-#r3:checked ~ .slider-box .slide {
-    transform: translateX(-200%);
-}
-// Зависимость для смены Городов
-.text1, .text2, .text3 {
-    display: none;
-    margin: 0;
-}
-#r1:checked ~ .slider-box .text-location .text1 {
-    display: block; 
-}
-#r2:checked ~ .slider-box .text-location .text2 {
-    display: block;
-}
-#r3:checked ~ .slider-box .text-location .text3 {
-    display: block;
-}
-// Зависимость для смены текста отзывов
-.text-slider1, .text-slider2, .text-slider3 {
-    
-    display: none;
-    min-height: 80px;
-    
-    margin: 0;
-    
-    background-image:  repeating-linear-gradient(to bottom, #fff2 0px, #fff2 26px, #E1E1E1 26px, #E1E1E1 29px);
-    
-        
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.87;
-    
-    letter-spacing: 0.04em;
-    @media screen and (max-width: $to-tablet) {
-    background-image: repeating-linear-gradient(to bottom, #fff2 0px, #fff2 26px, #E1E1E1 28px, #E1E1E1 29px);
-    
   }
-    
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.slick-dots li button {
+  font-size: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+  border-color: transparent;
+  background-color: #d9d9d9;
+  outline: none;
+  transform: scale(1);
+  transition: transform 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+// Активная кнопка переключателя
+.slick-dots li.slick-active button {
+  background-image: url('../images/reviews/home.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border-radius: 20%;
+  transform: scale(1.2);
+}
+.slider__item .text-box {
+  position: relative;
+  max-width: 926px;
+  min-height: 138px;
+  margin: 0 auto;
+  padding: 40px 85px;
+}
+.slider__item .text-slide {
+  margin: 0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #e1e1e1 0 1px,
+    transparent 1px 31px
+  );
   
-  @media screen and(min-width: $tablet) {
-    padding-left: 54px;
-    font-size: 16px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 265%;
+
+  text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 216%;
   }
-  @media screen and(min-width: $desctop) {
-    font-size: 16px;
-  }
-}
-#r1:checked ~ .text-container .text-slider1 {
-    display: block; 
-}
-#r2:checked ~ .text-container .text-slider2 {
-    display: block;
-}
-#r3:checked ~ .text-container .text-slider3 {
-    display: block;
-}
-.text-location {
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 172px;    
-    margin-bottom: 40px;
-    text-align: center;
-    
-    font-weight: 500;
+  @media screen and (min-width: $desctop) {
     font-size: 16px;
     line-height: 186%;
+  }
+}
+.text-box::before {
+  position: absolute;
+  left: 50px;
+  top: 25px;
 
-}
-// Зависимость для смены переключателя
-#r1:checked ~.slider-box .slider-navigation .bar1 {
-    background-image: url("../images/reviews/home.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
-    transform: scale(1);
-    
-}
-#r2:checked ~ .slider-box .slider-navigation .bar2 {
-    background-image: url("../images/reviews/home.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
-    transform: scale(1);
-    
-}
-#r3:checked ~.slider-box .slider-navigation .bar3 {
-    background-image: url("../images/reviews/home.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
-    transform: scale(1);
-    
-}
-.bar1, .bar2, .bar3 {
-    
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    background-color: #D9D9D9;
-    border-radius: 50%;
-    
-    transform: scale(0.8);
-    
-    
-    cursor: pointer;
-}
-.bar1, .bar2 {
-    margin-right: 10px;
-}
-// Псевдоелемент для текста
-.text-slider1::before, .text-slider2::before,
-.text-slider3::before {
-    position: absolute;
-    left: 0;
-    top: 15px;
-    left: 58px;
-    content: "";
-    display: block;
-    width: 54px;
-    height: 40px;
-    background-image: url("../images/reviews/quote.png");
-    @media screen and (max-width: 767px) {
-    left: 30px;
-    
-  }
-  @media screen and (min-width: $tablet) and (max-width: $to-desctop) {
-    left: 70px;
-    
-  }
+  content: '';
+  display: block;
+  width: 54px;
+  height: 40px;
+  background-image: url('../images/reviews/quote.png');
   z-index: -1;
 }
-.text-container {
-    position: relative;
-    
-    max-width: 928px;
-   
-            
-    padding: 32px 50px;
-    margin-bottom: 15px;
-
+.slider__item .points {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+}
+.points > .points-icon {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #c7133e;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.slider__item .slide-subtitle {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 186%;
+  & .slide-subtitle-item {
+    margin-top: 0;
+    margin-bottom: 35px;
     text-align: center;
-
-    background-color: #FAFAFA;
-    z-index: -2;
-    @media screen and (max-width: $to-tablet)  {
-    margin: 0 20px;
-    
   }
 }
 
-.point-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 90px;
-  @media screen and (max-width: 767px) {
-    margin-top: 30px;
-    
-  }
-}
-.point-container .point {
-    margin: 5px;
-    width: 4px;
-    height: 4px;
-
-    background-color: #C7133E;
-    border-radius: 50%;
+.slider__item img {
+  margin: 0 auto;
+  width: 85px;
+  height: 85px;
 }
