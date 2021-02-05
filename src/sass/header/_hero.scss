@@ -12,6 +12,8 @@
   }
 }
 .hero {
+  overflow: hidden;
+
   width: 100%;
   background-color: $hero-bgc;
 }
