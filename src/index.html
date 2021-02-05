@@ -15,9 +15,22 @@
     <include src="./partials/reviews.html"></include>
     <include src="./partials/schedule.html"></include>
     <include src="./partials/footer.html"></include>
-    
+
+    <a href="#top" class="backUp">To top</a> 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./js/mobile-menu.js"></script>
+
+<!-- <script type="text/javascript">
+  $(document).ready(function () {
+    $("#top").on("click", "a", function (event) {
+      event.preventDefault();
+      var id = $(this).attr('href'),
+        top = $(id).offset().top;
+      $('body,html').animate({ scrollTop: top }, 1500);
+    });
+  });
+</script> -->
+
     <script src="./index.js"></script>
   </body>
 </html>
