@@ -65,18 +65,11 @@
   }
 }
 
-h2,
-h3,
-h4 {
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin: 0;
-}
-
 .schedule-item {
+  @media screen and(min-width: $tablet) {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
   padding-bottom: 25px;
   margin-bottom: 25px;
 
@@ -91,11 +84,19 @@ p {
 
 .card-title {
   display: inline-block;
+
   border-radius: 4px;
   color: #ffffff;
   background-color: $coffee;
+
   margin-bottom: 25px;
+  @media screen and(min-width: $tablet) {
+    margin-bottom: 30px;
+  }
+  margin-top: 0;
+
   padding: 0 25px;
+
   font-weight: 500;
   font-size: 12px;
   line-height: 1.86;
@@ -125,7 +126,12 @@ p {
   background: #ffffff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
-  margin-bottom: 20px;
+  @media screen and(max-width: $to-tablet) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
   width: 220px;
 
   padding: 43px 20px;
@@ -137,18 +143,21 @@ p {
     transform: scale(1.07);
   }
 
-  &:nth-child(3n) {
-    margin-bottom: 0;
-  }
+  // &:nth-child(3n) {
+  //   margin-bottom: 0;
+  // }
 
   @media screen and (min-width: $tablet) {
     padding: 50px 31px;
-    margin-bottom: 0;
-    margin-right: 20px;
 
-    &:nth-child(3n) {
-      margin-right: 0;
+    // margin-bottom: 0;
+    &:not(:last-child) {
+      margin-right: 20px;
     }
+
+    // &:nth-child(3n) {
+    //   margin-right: 0;
+    // }
   }
 
   @media screen and (min-width: $desctop) {
@@ -174,6 +183,8 @@ p {
   color: black;
   font-size: 12px;
   line-height: 1.86;
+
+  margin-top: 0;
   margin-bottom: 10px;
 
   @media screen and (min-width: $tablet) {
@@ -189,6 +200,8 @@ p {
   color: black;
   line-height: 1.86;
 
+  margin: 0;
+
   @media screen and (min-width: $tablet) {
     font-size: 14px;
   }
@@ -202,6 +215,8 @@ p {
   color: $dark-pink;
   line-height: 1.83;
 
+  margin: 0;
+
   @media screen and (min-width: $tablet) {
     font-size: 14px;
     line-height: 1.86;
@@ -211,11 +226,16 @@ p {
     font-size: 16px;
     line-height: 1.87;
   }
+  &--first {
+    margin-bottom: 10px;
+  }
 }
 
 .paragraph-address {
   color: $description-text;
   font-weight: 500;
+
+  margin: 0;
 
   @media screen and (min-width: $tablet) {
     font-size: 14px;
@@ -228,8 +248,12 @@ p {
   }
 }
 .schedule-buttons {
-  text-align: center;
-
+  // text-align: center;
+  @media screen and(max-width: $to-tablet) {
+    width: 161px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   @media screen and (min-width: $tablet) {
     display: flex;
     justify-content: center;
@@ -237,70 +261,51 @@ p {
 }
 
 .schedule-button {
-  margin-bottom: 10px;
-
   &:nth-child(2n) {
     margin-bottom: 0;
   }
-
-  @media screen and (min-width: $tablet) {
-    margin-right: 14.5px;
-    margin-bottom: 0;
-
-    &:nth-child(2n) {
-      margin-right: 0;
+  @media screen and(max-width: $to-tablet) {
+    &:first-child {
+      margin-bottom: 10px;
     }
   }
-
-  @media screen and (min-width: $desctop) {
-    margin-right: 15px;
-
-    &:nth-child(2n) {
-      margin-right: 0;
+  @media screen and (min-width: $tablet) {
+    &:first-child {
+      margin-right: 15px;
     }
   }
 }
+.schedule-locations_btn {
+  @include page_button(#fff, $accented-text, $pink-btn-hover-bgc);
+  width: 161px;
 
+  @media screen and(min-width: $tablet) {
+    width: 191px;
+  }
+
+  @media screen and(min-width: $desctop) {
+    width: 198px;
+  }
+}
+.schedule-franshise_btn {
+  @include page_button($accented-text, #fff, $light-btn-hover-bgc);
+
+  width: 161px;
+  @media screen and(min-width: $tablet) {
+    width: 174px;
+  }
+  @media screen and(min-width: $desctop) {
+    width: 180px;
+  }
+}
 .button-schedule {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.31;
-  border: 1px solid transparent;
-  border-radius: 22px;
-  cursor: pointer;
-  width: 161px;
-  height: 44px;
-
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  &__pink {
-    color: white;
-    background-color: $accented-text;
-
-    &:hover,
-    &:focus {
-      background-color: $pink-btn-hover-bgc;
-    }
-  }
-  &__white {
-    color: $accented-text;
-    background-color: white;
-
-    &:hover,
-    &:focus {
-      background-color: $light-btn-hover-bgc;
-    }
-  }
-
-  @media screen and (min-width: $tablet) {
-    font-size: 16px;
-    line-height: 1.31;
-  }
 }
 
 .schedule-arrow {
+  margin-left: 15px;
   stroke: currentColor;
   &--white {
     stroke: #ffffff;

@@ -1,5 +1,5 @@
 .hero-container {
-  // position: relative;
+  position: relative;
   padding-top: 6px;
   height: 502px;
 
@@ -33,7 +33,7 @@
 
   @media screen and(min-width: $desctop) {
     position: absolute;
-    left: -32px;
+    left: -70px;
     top: 0;
   }
 }
